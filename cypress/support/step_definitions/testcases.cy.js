@@ -90,7 +90,7 @@ Then('I click again on the “Continue” button', async () => {
   calculator.ContinueButton.click({force: true});
 });
 Then('I verify the text on the “Calculator” page', async () => {
-  calculator.Text.should('include.text', '$9,272' );
+  calculator.Text.should('include.text', '$' );
 });
 //Scenario#4
 When('I click on the “Integrations” link', async() => {
@@ -207,13 +207,13 @@ Then('I take a screenshot of the “private LTE networks” page', async () => {
 When('I click on the “Blog” link', async() => {
   videopage.BlogLink.click({force: true});
 });
-Then('I click on the “Verify API” button of the filter', async () => {
-  videopage.VerifyAPIButton.click({force: true});
+Then('I scroll and click on the “Page 2” link', async () => {
+  base.scrollandclick(videopage.Page2Link);
 });
-Then('I click on the “Guides & Tutorials” button of the filter', async () => {
-  videopage.GuidesButton.click({force: true});
+Then('I scroll and click on the “Page 3” link', async () => {
+  base.scrollandclick(videopage.Page3Link);
 });
-Then('I scroll and click on the “VIDEO: How to Build a Call Center with Python and TeXML” link', async () => {
+Then('I scroll and click on the “WebRTC Video Chat and Streaming Explained” link', async () => {
   base.scrollandclick(videopage.VideoLink);
   cy.on('uncaught:exception', (err, runnable) => {
     expect(err.message).to.include('JSON');
@@ -291,6 +291,7 @@ Then('I scroll and click on the “Toll-Free Numbers” link', async () => {
 });
 Then('I click on the “Refresh Numbers” button', async () => {
   tollfreenumbers.RefreshNumbersButton.click({force: true});
+  cy.wait(3000);
 });
 Then('I click on the “Add to cart” button', async () => {
   tollfreenumbers.AddToCartButton.click({force: true});

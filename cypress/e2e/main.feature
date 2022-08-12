@@ -70,11 +70,11 @@ Feature: Verify Telnyx page
      Then I scroll and click into the “private LTE networks” link
      Then I take a screenshot of the “private LTE networks” page
 
-   Scenario: Take a screenshot of the “VIDEO: How to Build a Call Center with Python and TeXML” page.
+   Scenario: Take a screenshot of the “WebRTC Video Chat and Streaming Explained” page.
      When I click on the “Blog” link
-     Then I click on the “Verify API” button of the filter
-     Then I click on the “Guides & Tutorials” button of the filter
-     Then I scroll and click on the “VIDEO: How to Build a Call Center with Python and TeXML” link
+     Then I scroll and click on the “Page 2” link 
+     Then I scroll and click on the “Page 3” link
+     Then I scroll and click on the “WebRTC Video Chat and Streaming Explained” link
      Then I take a screenshot of the “VIDEO” page
 
    Scenario: Verify the text on the “Guide” page.

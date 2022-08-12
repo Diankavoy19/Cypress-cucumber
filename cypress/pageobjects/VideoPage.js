@@ -2,14 +2,14 @@ class VideoPage{
     get BlogLink() {
         return cy.get('header [href="/resources"]');
     };
-    get VerifyAPIButton() {
-        return cy.get('div:first-Child[role="radiogroup"] li:nth-Child(2)');
+    get Page2Link() {
+        return cy.get('li:nth-Child(2) [href="/resources/page/2"]');
     };
-    get GuidesButton () {
-        return cy.get('div:nth-Child(2)[role="radiogroup"] li:nth-Child(2)');
+    get Page3Link () {
+        return cy.get('li:nth-Child(4) [href="/resources/page/3"]');
     };
     get VideoLink () {
-        return cy.get('[href^="/resources/video"]');
+        return cy.get('[href="/resources/webrtc-video"]');
     };
 };
 export default VideoPage;

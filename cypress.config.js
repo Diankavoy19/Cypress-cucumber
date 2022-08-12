@@ -9,7 +9,7 @@ async function setupNodeEvents(on, config) {
 
   // Make sure to return the config object as it might have been modified by the plugin.
   return config;
-}
+};
 
 module.exports = defineConfig({
   e2e: {
@@ -25,4 +25,5 @@ module.exports = defineConfig({
   },
   },
 });
+
 
