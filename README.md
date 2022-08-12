@@ -1,6 +1,6 @@
 # Cypress-cucumber
 ### Description
-[Cypress is a next generation front end testing tool built for the modern web](https://www.cypress.io/) with software tool that supports behavior-driven development [cucumber](https://cucumber.io/).
+[Cypress ](https://www.cypress.io/) is a next generation front end testing tool built for the modern web with software tool that supports behavior-driven development [cucumber](https://cucumber.io/).
 
 ### Setup
 Before using cypress with cucumber, you need to install [node.js](https://nodejs.org/en/), install all the dependencies for doing the full operation of the node.js.
