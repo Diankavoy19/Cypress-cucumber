@@ -31,4 +31,4 @@ jobs:
                   retention-days: 5
             - name: put report to docs
               if: always()
-              run: cp -r cucumber-report.html ./docs/reports/
+              run: cp -R cucumber-report.html ./docs/reports/
