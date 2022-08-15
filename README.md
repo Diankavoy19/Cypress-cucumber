@@ -6,7 +6,7 @@
 Before using cypress with cucumber, you need to install [node.js](https://nodejs.org/en/), install all the dependencies for doing the full operation of the node.js.
 
 Dependencies:
-- [cypress] (https://www.npmjs.com/package/cypress)
+- [cypress](https://www.npmjs.com/package/cypress)
 - [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
 - [@cucumber/html-formatter](https://github.com/cucumber/html-formatter)
 
