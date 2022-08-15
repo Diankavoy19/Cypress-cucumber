@@ -27,8 +27,8 @@ jobs:
               if: always()
               with:
                   name: cucumber-report
-                  path: cucumber-report.html
+                  path: ./cucumber-report.html
                   retention-days: 5
             - name: put report to docs
               if: always()
-              run: cp -R cucumber-report.html docs/reports/
+              run: cp -r cucumber-report.html ./docs/reports/
