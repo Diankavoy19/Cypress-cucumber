@@ -32,6 +32,6 @@ jobs:
             - name: put report to docs
               if: always()
               run: cp -R cucumber-report.html ./docs/reports/
-            - name: build javascript assets
+            - name: build assets
               run: make prepare
               shell: bash
