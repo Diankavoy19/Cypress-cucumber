@@ -29,6 +29,9 @@ jobs:
                   name: cucumber-report
                   path: ./cucumber-report.html
                   retention-days: 5
+            - name: get report from archive(big file)
+              if: always()
+              run: git archive --format=tar --remote=origin HEAD:docs\reports cucumber-report.html | tar -O -xf -
             - name: put report to docs
               if: always()
               run: cp -R cucumber-report.html ./docs/reports/
