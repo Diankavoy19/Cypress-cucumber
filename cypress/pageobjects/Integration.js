@@ -1,18 +1,24 @@
+const integrationsLink = '[href="/integrations"]';
+const integrationMarketplaceLink = 'span [href*="marketplace"]';
+const searchInput = 'div.search-input-container input ';
+const searchQueryLink = '[href="/integrations/volt"]';
+const text = 'h1.title';
+
 class Integration{
     get IntegrationsLink() {
-        return cy.get('[href="/integrations"]');
+        return cy.get(integrationsLink);
     };
     get IntegrationMarketplaceLink() {
-        return cy.get('span [href*="marketplace"]');
+        return cy.get(integrationMarketplaceLink);
     };
-    get SearchInput () {
-        return cy.get('div.search-input-container input ');
+    get SearchInput() {
+        return cy.get(searchInput);
     };
-    get SearchQueryLink () {
-        return cy.get('[href="/integrations/volt"]');
+    get SearchQueryLink() {
+        return cy.get(searchQueryLink);
     };
     get Text() {
-        return cy.get('h1.title');
+        return cy.get(text);
     };
 };
-export default Integration;
+module.exports = new Integration();

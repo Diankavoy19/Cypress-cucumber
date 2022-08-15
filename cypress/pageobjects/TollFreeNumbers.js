@@ -1,18 +1,24 @@
+const customerStories = '[href="/customer-stories"]';
+const readAboutPointBlankLink = '[href*="pointblank"]';
+const tollFreeNumbersLink = '[href$="toll-free-numbers"]';
+const refreshNumbersButton = 'section>div[role="button"] span';
+const addToCartButton = 'div[role="button"]:first-Child div:nth-Child(3)>button';
+
 class TollFreeNumbers{
     get CustomerStories() {
-        return cy.get('[href="/customer-stories"]');
+        return cy.get(customerStories);
     };
     get ReadAboutPointBlankLink() {
-        return cy.get('[href*="pointblank"]');
+        return cy.get(readAboutPointBlankLink);
     };
     get TollFreeNumbersLink() {
-        return cy.get('[href$="toll-free-numbers"]');
+        return cy.get(tollFreeNumbersLink);
     };
     get RefreshNumbersButton() {
-        return cy.get('section>div[role="button"] span');
+        return cy.get(refreshNumbersButton);
     };
     get AddToCartButton() {
-        return cy.get('div[role="button"]:first-Child div:nth-Child(3)>button');
+        return cy.get(addToCartButton);
     };
 };
-export default TollFreeNumbers;
+module.exports = new TollFreeNumbers();

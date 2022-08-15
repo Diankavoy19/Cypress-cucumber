@@ -5,7 +5,16 @@
 ### Setup
 Before using cypress with cucumber, you need to install [node.js](https://nodejs.org/en/), install all the dependencies for doing the full operation of the node.js.
 
-Download git repository and use install node modules.
+Dependencies:
+- [cypress] (https://www.npmjs.com/package/cypress)
+- [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
+- [@cucumber/html-formatter](https://github.com/cucumber/html-formatter)
+
+Download git repository 
+``` console
+git clone https://github.com/Diankavoy19/Cypress-cucumber
+```
+and use install node modules.
 
 After that we can run all our tests.
 ```console
@@ -15,7 +24,7 @@ or
 ```console
 npx cypress:run
 ```
-or with config file for iphone-x
+or with config file for macbook-15
 ```console
 npm run cypress:config
 ```

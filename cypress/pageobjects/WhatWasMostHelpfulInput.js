@@ -1,24 +1,32 @@
+const developerDocsLink = 'header [href*="developers"]';
+const docsButton = '#docs-mobile-sidebar div:nth-Child(2) label[for*="mobile"]>svg';
+const mediaLink = '#docs-mobile-sidebar [href="/docs/v2/media"]';
+const setupMediaStorageButton = 'main [href*="quickstart"]';
+const yesButton = 'main>div:nth-Child(3) button:nth-Child(2)';
+const helpfulInput = 'textarea[name="feedback"]';
+const sendButton = 'main form button';
+
 class HelpfulInput{
     get DeveloperDocsLink() {
-        return cy.get('header [href*="developers"]');
+        return cy.get(developerDocsLink);
     };
     get DocsButton() {
-        return cy.get('#docs-mobile-sidebar div:nth-Child(2) label[for*="mobile"]>svg');
+        return cy.get(docsButton);
     };
     get MediaLink () {
-        return cy.get('#docs-mobile-sidebar [href="/docs/v2/media"]');
+        return cy.get(mediaLink);
     };
-    get SetupMediaStorageButton () {
-        return cy.get('main [href*="quickstart"]');
+    get SetupMediaStorageButton() {
+        return cy.get(setupMediaStorageButton);
     };
     get YesButton() {
-        return cy.get('main>div:nth-Child(3) button:nth-Child(2)');
+        return cy.get(yesButton);
     };
     get HelpfulInput() {
-        return cy.get('textarea[name="feedback"]');
+        return cy.get(helpfulInput);
     };
     get SendButton() {
-        return cy.get('main form button');
+        return cy.get(sendButton);
     }
 };
-export default HelpfulInput;
+module.exports = new HelpfulInput();

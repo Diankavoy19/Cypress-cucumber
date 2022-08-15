@@ -1,9 +1,12 @@
+const releaseNotesLink = '[href="/release-notes"]';
+const anchorSiteLink = '[href*="miami"]';
+
 class ReleaseNotes{
     get ReleaseNotesLink() {
-        return cy.get('[href="/release-notes"]');
+        return cy.get(releaseNotesLink);
     };
     get AnchorSiteLink() {
-        return cy.get('[href*="miami"]');
+        return cy.get(anchorSiteLink);
     };
 };
-export default ReleaseNotes;
+module.exports = new ReleaseNotes();

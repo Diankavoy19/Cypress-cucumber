@@ -16,7 +16,19 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-            - run: npm i npm@latest
-            - run: npm i
+            - name: update node manager
+              run: npm i npm@latest
+            - name: install all dependencies
+              run: npm i
             - name: run test
               run: npx cypress run --config-file config/config.js
+            - name: Upload artifact cucumber-report
+              uses: actions/upload-artifact@v3
+              if: always()
+              with:
+                  name: cucumber-report
+                  path: cucumber-report.html
+                  retention-days: 5
+            - name: put report to docs
+              if: always()
+              run: cp -R cucumber-report.html docs/reports/

@@ -1,13 +1,15 @@
+const cookiesButton = '#__next footer+div div div button';
+const mainUrl = 'https://telnyx.com/';
 class Base{
     get CookiesButton() {
-        return cy.get('#__next footer+div div div button');
+        return cy.get(cookiesButton);
     };
     navigate(){
-         cy.visit('https://telnyx.com/');
+         cy.visit(mainUrl);
     };
     scrollandclick(Element){
          Element.scrollIntoView();
          Element.click({force: true});
     }
 };
-export default Base;
+module.exports = new Base();

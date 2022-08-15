@@ -1,15 +1,20 @@
+const privaceLink = '[href$="privacy"]';
+const complianceLink = '[href="#compliance"]';
+const transferButton = '#faq div:first-Child>dt button';
+const text = '#faq #faq1_description p:first-Child';
+
 class Compliance{
     get PrivacyLink() {
-        return cy.get('[href$="privacy"]');
+        return cy.get(privaceLink);
     };
     get ComplianceLink() {
-        return cy.get('[href="#compliance"]');
+        return cy.get(complianceLink);
     };
     get TransferButton() {
-        return cy.get('#faq div:first-Child>dt button');
+        return cy.get(transferButton);
     };
     get Text() {
-        return cy.get('#faq #faq1_description p:first-Child');
+        return cy.get(text);
     };
 };
-export default Compliance;
+module.exports = new Compliance();

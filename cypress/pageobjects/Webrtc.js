@@ -1,18 +1,24 @@
+const seeAllProductsLink = 'header [href="/products"]';
+const webRTCLink = '[href="/products/webrtc"]';
+const guideLink = '[href$="webrtc/quickstart"]';
+const webrtclink = '[href$="@telnyx/webrtc"]';
+const text = '#follow-ups span:first-Child';
+
 class Webrtc{
     get SeeAllProductsLink() {
-        return cy.get('header [href="/products"]');
+        return cy.get(seeAllProductsLink);
     };
     get WebRTCLink() {
-        return cy.get('[href="/products/webrtc"]');
+        return cy.get(webRTCLink);
     };
-    get GuideLink () {
-        return cy.get('[href$="webrtc/quickstart"]');
+    get GuideLink() {
+        return cy.get(guideLink);
     };
-    get webrtcLink () {
-        return cy.get('[href$="@telnyx/webrtc"]');
+    get webrtcLink() {
+        return cy.get(webrtclink);
     };
     get Text () {
-        return cy.get('#follow-ups span:first-Child');
+        return cy.get(text);
     };
 };
-export default Webrtc;
+module.exports = new Webrtc();

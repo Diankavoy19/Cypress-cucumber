@@ -1,18 +1,24 @@
+const seeAllSolutionLink = '[href="/solutions"]';
+const exploreUCaaSSolutionsLink = '[href$="ucaas"]';
+const purchaseNumbersWithOurAPILink = '[href$="/numbers"]';
+const runInPostmanButton = '[href*=".postman"]';
+const text = 'blockquote p';
+
 class Postman{
     get SeeAllSolutionLink() {
-        return cy.get('[href="/solutions"]');
+        return cy.get(seeAllSolutionLink);
     };
     get ExploreUCaaSSolutionsLink() {
-        return cy.get('[href$="ucaas"]');
+        return cy.get(exploreUCaaSSolutionsLink);
     };
     get PurchaseNumbersWithOurAPILink() {
-        return cy.get('[href$="/numbers"]');
+        return cy.get(purchaseNumbersWithOurAPILink);
     };
     get RunInPostmanButton() {
-        return cy.get('[href*=".postman"]');
+        return cy.get(runInPostmanButton);
     };
     get Text() {
-        return cy.get('blockquote p');
+        return cy.get(text);
     };
 };
-export default Postman;
+module.exports = new Postman();

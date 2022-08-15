@@ -1,33 +1,44 @@
+const reportAbuseLink = '[href="/report-abuse"]';
+const subjectInput = 'input[name="shortDescription"]';
+const phoneNumberInput = 'input[name="abusivePhoneNumber"]';
+const abusedPhoneNumberInput = 'input[name="abusedPhoneNumber"]';
+const checkbox = 'label[for="serviceAbusedSms"]';
+const fullNameInput = 'input[name="reporterName"]';
+const emailInput = 'input[name="reporterEmail"]';
+const detailsInput = 'input[name="longDescription"]';
+const submitButton = 'button[type="submit"]';
+const text = 'div[role="alert"] span';
+
 class ReportAbuseForm{
     get ReportAbuseLink() {
-        return cy.get('[href="/report-abuse"]');
+        return cy.get(reportAbuseLink);
     };
     get SubjectInput() {
-        return cy.get('input[name="shortDescription"]');
+        return cy.get(subjectInput);
     };
     get PhoneNumberInput() {
-        return cy.get('input[name="abusivePhoneNumber"]');
+        return cy.get(phoneNumberInput);
     };
     get AbusedPhoneNumberInput() {
-        return cy.get('input[name="abusedPhoneNumber"]');
+        return cy.get(abusedPhoneNumberInput);
     };
     get Checkbox() {
-        return cy.get('label[for="serviceAbusedSms"]');
+        return cy.get(checkbox);
     };
     get FullNameInput() {
-        return cy.get('input[name="reporterName"]');
+        return cy.get(fullNameInput);
     };
     get EmailInput() {
-        return cy.get('input[name="reporterEmail"]');
+        return cy.get(emailInput);
     };
     get DetailsInput() {
-        return cy.get('input[name="longDescription"]');
+        return cy.get(detailsInput);
     };
     get SubmitButton() {
-        return cy.get('button[type="submit"]');
+        return cy.get(submitButton);
     };
     get Text() {
-        return cy.get('div[role="alert"] span');
+        return cy.get(text);
     };
 };
-export default ReportAbuseForm;
+module.exports = new ReportAbuseForm();
