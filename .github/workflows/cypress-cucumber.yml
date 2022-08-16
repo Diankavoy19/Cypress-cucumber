@@ -29,7 +29,7 @@ jobs:
             - name: Install reporter dev
               run: npm install multiple-cucumber-html-reporter --save-dev
             - name: run test
-              run: npx cypress run --config-file config/config.js
+              run: npm run cypress:run
             - name: Generate reports
               if: always()
               run: npm run cypress:report
