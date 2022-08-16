@@ -22,6 +22,8 @@ jobs:
               run: npm i
             - name: run test
               run: npx cypress run --config-file config/config.js
+            - name: copy reports
+              run: cp -R ./cucumber-*.* cucumber-report
             - name: Upload artifact cucumber-report
               uses: actions/upload-artifact@v3
               if: always()
