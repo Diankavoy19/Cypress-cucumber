@@ -5,6 +5,12 @@
 ### Setup
 Before using cypress with cucumber, you need to install [node.js](https://nodejs.org/en/), install all the dependencies for doing the full operation of the node.js.
 
+Download git repository 
+``` console
+git clone https://github.com/Diankavoy19/Cypress-cucumber
+```
+and use install node modules.
+
 Dependencies:
 - [cypress](https://www.npmjs.com/package/cypress)
 - [cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
@@ -57,12 +63,6 @@ Also you need to download [cucumber-json-formatter](https://github.com/cucumber/
 ``` console 
 cucumber-json-formatter.exe
 ```
-Download git repository 
-``` console
-git clone https://github.com/Diankavoy19/Cypress-cucumber
-```
-and use install node modules.
-
 After that we can run all our tests.
 ```console
 npm run cypress:open 
