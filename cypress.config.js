@@ -16,15 +16,6 @@ module.exports = defineConfig({
     specPattern: "**/*.feature",
     supportFile: false,
     setupNodeEvents,
-    "reporter": "cypress-mochawesome-reporter",
-    "reporterOptions": {
-    "reportDir": "docs/reports",
-    "charts": true,
-    "reportPageTitle": "My Test Suite",
-    "embeddedScreenshots": true,
-    "inlineAssets": true
-  },
-  "video": false,
     devServer: {
       delay: 500,
       force404: false,

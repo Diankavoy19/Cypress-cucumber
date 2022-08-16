@@ -3,7 +3,8 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cypress:run": "npx cypress run",
-    "cypress:config": "npx cypress run --config-file config/config.js"
+    "cypress:config": "npx cypress run --config-file config/config.js",
+    "cypress:report": "node cucumber-html-report.js"
   },
   "html": {
     "enabled": true
@@ -15,12 +16,21 @@
     "cucumber-html-reporter": "^5.5.0",
     "cypress": "^10.4.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-mochawesome-reporter": "^3.2.2"
+    "multiple-cucumber-html-reporter": "^1.21.6"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "html": {
       "enabled": true
+    },
+    "json": {
+      "enabled": true,
+      "output": "./docs/jsonlogs/log.json",
+      "formater": "cucumber-json-formatter.exe"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "./docs/jsonlogs/messages.ndjson"
     }
   },
   "dependencies": {

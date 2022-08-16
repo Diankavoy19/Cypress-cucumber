@@ -1,0 +1,11 @@
+{
+    "json": {
+      "enabled": true,
+      "output": "./docs/jsonlogs/log.json",
+      "formater": "cucumber-json-formatter.exe"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "./docs/jsonlogs/messages.ndjson"
+    }
+}

@@ -16,14 +16,12 @@ const helpfulInput = require("../../pageobjects/WhatWasMostHelpfulInput");
 const net = require("../../pageobjects/NetButton");
 const tollfreenumbers = require("../../pageobjects/TollFreeNumbers");
 
-Given('I am on the Telnyx page', () => {
+Given('I am on the Telnyx page and click the cookies', () => {
   base.navigate();
-});
-//Scenario#1
-When('I click the Cookies', async() => {
   base.CookiesButton.click();
 });
-Then('I click on the “Network” link', async() => {
+//Scenario#1
+When('I click on the “Network” link', async() => {
   explore.NetworkLink.click({force: true});
 });
 Then('I scroll and click into “Competitor Networks” Button', async () => {
