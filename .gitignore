@@ -1,4 +1,3 @@
 node_modules
 cucumber-report.html
 *.ndjson
-cucumber-report.json
