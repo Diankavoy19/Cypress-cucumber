@@ -28,8 +28,6 @@ jobs:
               run: npm install --save-dev @cypress/browserify-preprocessor
             - name: Install reporter dev
               run: npm install multiple-cucumber-html-reporter --save-dev
-            - name: Make formatter executable
-              run: chmod +x cucumber-json-formatter
             - name: run test
               run: npx cypress run --config-file config/config.js
             - name: Generate reports
