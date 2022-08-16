@@ -1,7 +1,7 @@
 name: Cypress-Cucumber Tests
 on:
     push:
-        branches: [master, main]
+        branches: [master]
 jobs:
     Run_test:
         runs-on: ubuntu-20.04 # Choosing OS
