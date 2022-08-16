@@ -6,10 +6,6 @@
     "cypress:config": "npx cypress run --config-file config/config.js",
     "cypress:report": "node cucumber-html-report.js"
   },
-  "html": {
-    "enabled": true
-  },
-  "reportDir": "docs/reports",
   "devDependencies": {
     "@cucumber/cucumber": "^8.5.1",
     "@cypress/browserify-preprocessor": "^3.0.2",
@@ -19,22 +15,17 @@
     "multiple-cucumber-html-reporter": "^1.21.6"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
-    "html": {
-      "enabled": true
-    },
     "json": {
       "enabled": true,
-      "output": "./docs/jsonlogs/log.json",
+      "output": "jsonlogs/log.json",
       "formater": "cucumber-json-formatter.exe"
     },
     "messages": {
       "enabled": true,
-      "output": "./docs/jsonlogs/messages.ndjson"
+      "output": "jsonlogs/messages.ndjson"
     }
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^12.0.1",
-    "@cucumber/html-formatter": "^19.2.0"
+    "@badeball/cypress-cucumber-preprocessor": "^12.0.1"
   }
 }
