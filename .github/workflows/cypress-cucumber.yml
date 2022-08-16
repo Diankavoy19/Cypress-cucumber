@@ -40,11 +40,10 @@ jobs:
                   name: cucumber-report
                   path: ./reports/cucumber-htmlreport
                   retention-days: 5 
-            - name: Deploy report
-              uses: JamesIves/github-pages-deploy-action@3.1.0
+            - name: Deploy to pages
               if: always()
+              uses: peaceiris/actions-gh-pages@v3.7.3
               with:
-                  ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-                  BRANCH: master # The branch the action should deploy to.
-                  FOLDER:  reports/cucumber-htmlreport/
-                  TARGET_FOLDER: docs
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_branch: gh-pages
+                  publish_dir: reports/cucumber-htmlreport/
