@@ -2,7 +2,7 @@
   "name": "cypress-cucumber",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "npx cypress run --browser chrome",
+    "cypress:run": "npx cypress run",
     "cypress:config": "npx cypress run --config-file config/config.js",
     "cypress:report": "node cucumber-html-report.js"
   },
