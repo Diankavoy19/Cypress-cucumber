@@ -4,7 +4,7 @@ on:
         branches: [master]
 jobs:
     Run_test:
-        runs-on: ubuntu-20.04 # Choosing OS
+        runs-on: windows-latest
         strategy:
             matrix:
                 node-version: [14.17.0]
