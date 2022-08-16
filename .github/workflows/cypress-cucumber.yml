@@ -38,7 +38,7 @@ jobs:
               if: always()
               with:
                   name: cucumber-report
-                  path: ./docs/cucumber-*.*
+                  path: ./docs/cucumber-htmlreport
                   retention-days: 5 
             - name: Deploy report
               uses: JamesIves/github-pages-deploy-action@3.1.0
@@ -46,5 +46,4 @@ jobs:
               with:
                   ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
                   BRANCH: master # The branch the action should deploy to.
-                  FOLDER: cucumber-report # The folder the action should deploy.
-                  TARGET_FOLDER: docs
+                  FOLDER:  docs
