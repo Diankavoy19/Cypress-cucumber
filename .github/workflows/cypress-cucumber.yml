@@ -23,6 +23,7 @@ jobs:
             - name: run test
               run: npx cypress run --config-file config/config.js
             - name: Generate reports
+              if: always()
               run: npm run cypress:report
             - name: copy reports
               run: cp ./cucumber-messages.ndjson cucumber-report/
