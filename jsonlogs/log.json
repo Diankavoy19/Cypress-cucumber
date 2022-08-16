@@ -13,7 +13,7 @@
             "line": 3,
             "name": "I am on the Telnyx page and click the cookies",
             "result": {
-              "duration": 3373000000,
+              "duration": 3493000000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
             "line": 6,
             "name": "I scroll and click into “Release Notes” link",
             "result": {
-              "duration": 94000000,
+              "duration": 89000000,
               "status": "passed"
             },
             "match": {
@@ -47,7 +47,7 @@
             "line": 7,
             "name": "I scroll and click into “Telnyx adds AnchorSite™ Point of Presence in Miami” link",
             "result": {
-              "duration": 1890000000,
+              "duration": 1335000000,
               "status": "passed"
             },
             "match": {
@@ -59,7 +59,7 @@
             "line": 8,
             "name": "I verify the link of the “Telnyx adds AnchorSite™ Point of Presence in Miami” page",
             "result": {
-              "duration": 754000000,
+              "duration": 1974000000,
               "status": "passed"
             },
             "match": {
