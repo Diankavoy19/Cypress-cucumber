@@ -20,20 +20,25 @@ jobs:
               run: npm i npm@latest
             - name: install all dependencies
               run: npm i
+            - name: Install Cypress
+              run: npm install cypress
+            - name: Install cypress-cucumber-preprocessor
+              run: npm install @badeball/cypress-cucumber-preprocessor
+            - name: Install cypress-browserify-preprocessor
+              run: npm install --save-dev @cypress/browserify-preprocessor
+            - name: Install reporter dev
+              run: npm install multiple-cucumber-html-reporter --save-dev
             - name: run test
               run: npx cypress run --config-file config/config.js
             - name: Generate reports
               if: always()
               run: npm run cypress:report
-            - name: copy reports
-              run: cp ./cucumber-messages.ndjson cucumber-report/
-            - run: cp ./cucumber-report.html cucumber-report/
             - name: Upload artifact cucumber-report
               uses: actions/upload-artifact@v3
               if: always()
               with:
                   name: cucumber-report
-                  path: ./cucumber-*.*
+                  path: ./docs/cucumber-*.*
                   retention-days: 5 
             - name: Deploy report
               uses: JamesIves/github-pages-deploy-action@3.1.0
